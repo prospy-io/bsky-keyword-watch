@@ -74,6 +74,10 @@ Each phrase is sent as a quoted query and then checked again locally on whole wo
 
 If you'd rather not run this yourself, [Prospy](https://prospy.io) does social listening and AI lead generation across X/Twitter, Reddit, Bluesky and Hacker News, surfacing buying-intent posts.
 
+## Source and issues
+
+The canonical repo is on Codeberg: [codeberg.org/prospy/bsky-keyword-watch](https://codeberg.org/prospy/bsky-keyword-watch). It's mirrored to GitHub at [github.com/prospy-io/bsky-keyword-watch](https://github.com/prospy-io/bsky-keyword-watch). Issues and pull requests are welcome on either.
+
 ## Development
 
 ```bash
