@@ -1,0 +1,51 @@
+{
+  "name": "bsky-keyword-watch",
+  "version": "0.1.0",
+  "description": "Read-only Bluesky keyword and buying-intent watcher using the public AT Protocol AppView (app.bsky.feed.searchPosts).",
+  "type": "module",
+  "main": "./dist/src/mod.js",
+  "types": "./dist/src/mod.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/mod.d.ts",
+      "default": "./dist/src/mod.js"
+    }
+  },
+  "bin": {
+    "bsky-keyword-watch": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node --test dist/test/",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "bluesky",
+    "atproto",
+    "social-listening",
+    "keyword-monitoring",
+    "lead-generation"
+  ],
+  "author": "Prospy",
+  "license": "MIT",
+  "homepage": "https://prospy.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://codeberg.org/prospy/bsky-keyword-watch.git"
+  },
+  "bugs": {
+    "url": "https://codeberg.org/prospy/bsky-keyword-watch/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0"
+  }
+}
