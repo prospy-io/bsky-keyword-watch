@@ -1,6 +1,6 @@
 {
   "name": "bsky-keyword-watch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read-only Bluesky keyword and buying-intent watcher using the public AT Protocol AppView (app.bsky.feed.searchPosts).",
   "type": "module",
   "main": "./dist/src/mod.js",

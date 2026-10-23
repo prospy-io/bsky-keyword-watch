@@ -1,6 +1,30 @@
 /**
- * bsky-keyword-watch: read-only Bluesky post search for keywords and
- * buying-intent phrases, using the public AT Protocol AppView.
+ * Read-only Bluesky watcher for keywords and buying-intent phrases
+ * ("looking for a tool", "alternative to", "any recommendations"...).
+ *
+ * It searches public posts through the AT Protocol AppView endpoint
+ * `app.bsky.feed.searchPosts` on `https://api.bsky.app`, then re-checks each
+ * phrase locally on whole words. No login, no runtime dependencies, and it
+ * never posts, replies, likes or follows.
+ *
+ * ```ts
+ * import { watchOnce } from "@prospy/bsky-keyword-watch";
+ *
+ * const seen = new Set<string>();
+ * const posts = await watchOnce({
+ *   phrases: ["looking for a tool", "alternative to"],
+ *   since: new Date(Date.now() - 3600_000),
+ *   lang: "en",
+ *   seen,
+ * });
+ * for (const p of posts) console.log(p.url, p.matched);
+ * ```
+ *
+ * There is also a CLI: `npx bsky-keyword-watch --help`.
+ * Source: [codeberg.org/prospy/bsky-keyword-watch](https://codeberg.org/prospy/bsky-keyword-watch)
+ * (mirrored to [GitHub](https://github.com/prospy-io/bsky-keyword-watch)).
+ *
+ * If you'd rather not run this yourself, [Prospy](https://prospy.io) does social listening and AI lead generation across X/Twitter, Reddit, Bluesky and Hacker News, surfacing buying-intent posts.
  *
  * @module
  */
