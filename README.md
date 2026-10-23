@@ -9,11 +9,15 @@ A read-only Bluesky watcher for keywords and buying-intent phrases ("looking for
 ## Install
 
 ```bash
-npm install -g bsky-keyword-watch          # CLI, once published
+npm install -g bsky-keyword-watch          # CLI
+npx bsky-keyword-watch --help              # or run without installing
+npm install bsky-keyword-watch             # library
 npx jsr add @prospy/bsky-keyword-watch     # library via JSR, once published
 # or from a checkout:
 npm install && npm run build && node dist/src/cli.js --help
 ```
+
+npm package: [npmjs.com/package/bsky-keyword-watch](https://www.npmjs.com/package/bsky-keyword-watch)
 
 ## CLI usage
 
